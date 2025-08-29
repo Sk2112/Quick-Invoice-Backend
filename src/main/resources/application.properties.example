@@ -1,0 +1,29 @@
+# ===============================
+# 🗄️ Database Configuration
+# ===============================
+spring.data.mongodb.uri=mongodb://<username>:<password>@localhost:27017/invoicedb
+# Example (local without auth):
+# spring.data.mongodb.uri=mongodb://localhost:27017/invoicedb
+
+# ===============================
+# 📧 Mail / SMTP Configuration
+# ===============================
+spring.mail.host=smtp.example.com
+spring.mail.port=587
+spring.mail.username=<your-smtp-username>
+spring.mail.password=<your-smtp-password>
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+spring.mail.protocol=smtp
+spring.mail.properties.mail.smtp.from=<your-email@example.com>
+
+# ===============================
+# 📝 Logging
+# ===============================
+logging.level.org.springframework.mail=DEBUG
+
+# ===============================
+# 🔑 Authentication / Clerk Integration
+# ===============================
+clerk.issuer=https://<your-clerk-app>.clerk.accounts.dev
+clerk.jwks-url=https://<your-clerk-app>.clerk.accounts.dev/.well-known/jwks.json
